@@ -1,0 +1,141 @@
+%----------------------------------------------------------------------------------------
+%	CONFIGURACION DOCUMENTO GENERAL
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt,a4paper,oneside]{report} % Formato tesis, 12 tamaño de letra
+\usepackage[english]{babel} % Asignar idioma por defecto spanish
+%\selectlanguage{spanish} % Idioma por defecto x2
+\usepackage[T1]{fontenc} % Aceptar caracteres con tíldes en el pdf generado
+\usepackage[UTF8]{ctex}
+\usepackage[utf8]{inputenc} % Aceptar caracteres con tíldes en Latex
+\usepackage{amsmath} % Para mostrar de forma adecuada las ecuaciones
+\usepackage{graphicx} % Para incluir imágenes 
+\usepackage{array} % Para incluir imagenes en tablas https://bit.ly/2KXhIlu
+\usepackage{float} % Para posicionar imágenes y tablas
+\usepackage{multirow} % Fácil manejo de filas
+\usepackage{longtable} % Para tablas que abarcan más de dos páginas
+\usepackage[table,xcdraw]{xcolor} % Para tablas generadas en https://www.tablesgenerator.com/
+% Tamaños de letra dentro de tablas https://texblog.org/2012/08/29/changing-the-font-size-in-latex/
+\usepackage{multicol} % Para poder partir en columnas 
+\usepackage[refpages]{gloss} % Para enumerar páginas
+\usepackage{anysize} % OBSOLETO, NECESITA SER CAMBIADO
+\usepackage{bigstrut} % Para automatizar ingresado de datos en tabla
+\usepackage{appendix} % Formato para títulos de los apéndices
+\usepackage{lscape} % Modifica margenes y rota la página pero no el enumerado
+\usepackage{pdflscape} % Cambiar orientación en el pdf
+\usepackage{listings} % Sirve para que se compile el Latex
+\usepackage{color} % Colores de fondo, texto y otros
+\usepackage{setspace} % Espacio entre lineas
+\usepackage{enumerate} % Estilo del contador de páginas
+\usepackage{ragged2e} % Formato de parrafos, justiticar y demás
+\usepackage{comment} % Hacer comentarios en latex
+\usepackage{pslatex} % Tipo de fuente
+\usepackage{apacite} % Citación en APA
+\usepackage{fixltx2e} % Corrige bugs de Latex 3
+\usepackage{caption} % Objetos flotantes en el documento
+\usepackage[top=2.54cm,
+			bottom=2.54cm,
+			left=2.54cm,
+			right=2.54cm,
+			headheight=17pt, % as per the warning by fancyhdr
+			includehead,includefoot,
+			heightrounded, % to avoid spurious underfull messages
+			]{geometry} % Márgenes para contenido y líneas de pie y cabecera de página
+\usepackage{fancyhdr} % Cabeza y pie de página 
+\usepackage{blindtext}
+\usepackage{pdfpages} % Cargar imagenes en pdf
+\usepackage{datetime} % Fecha
+\usepackage{footnote} % Tablas largas y foot note para tablas https://texblog.org/2012/02/03/using-footnote-in-a-table/
+\usepackage{enumitem} % Enumerar letras
+\usepackage[bottom]{footmisc} % Forzar notas de página pegadas hacia abajo https://bit.ly/3fyOA2f
+
+
+\usepackage[paper=portrait,pagesize]{typearea} %PORTRAID-LANDSCAPE 
+
+\usepackage{url} % Evitar enlaces en bibliografía largos & enlazar enlaces de bibliografía
+\usepackage{breakurl} % Broken links
+\usepackage{hyperref} % Evitar enlaces en bibliografía largos & enlazar enlaces de bibliografía
+\usepackage{natbib}
+\usepackage{etoolbox}
+
+%----------------------------------------------------------------------------------------
+%	CONFIGURACION FORMATO SECCIONES
+%----------------------------------------------------------------------------------------
+
+\fancypagestyle{blank-page}{
+	\fancyhf{}% clear all header and footer fields	
+	\fancyhead[L,C,R]{}
+	\fancyfoot[L,C,R]{}
+}
+
+\fancypagestyle{after-table-of-content}{
+	\fancyhf{}% clear all header and footer fields	
+	\fancyhead[L,C,R]{}
+	\fancyfoot[L,C,R]{}
+	\fancyfoot[c]{PUCP}
+	\renewcommand{\headrulewidth}{0.4pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+}
+\fancypagestyle{myportland}{
+	\fancyhf{}% clear all header and footer fields	
+	\fancyhead[L,C,R]{}
+	\fancyfoot[L,C,R]{}
+	\fancyfoot[c]{\thepage}
+	\renewcommand{\headrulewidth}{0.4pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+}
+% https://tex.stackexchange.com/questions/337/how-to-change-certain-pages-into-landscape-portrait-mode
+\fancypagestyle{mylandscape}{ % LANDSCAPE	
+	\fancyhead{}% clear all header 
+	\fancyfoot{}% clear all footer
+	\fancyhf{}% clear all header and footer fields	
+	\fancyhead[LO,RE]{}
+	\fancyfoot[LO,RE]{}
+	\fancyfoot{% Footer
+		\makebox[\textwidth][r]{% Right
+			\rlap{\hspace{0.75cm}% Push out of margin by \footskip
+				\smash{% Remove vertical height
+					\raisebox{4.87in}{% Raise vertically
+						\rotatebox{90}{\thepage}}}}}}% Rotate counter-clockwise
+	\renewcommand{\headrulewidth}{0pt}% No header rule
+	\renewcommand{\footrulewidth}{0pt}% No footer rule
+}
+
+
+\newcommand*\rot{\rotatebox{90}} % Poder rotar 90° texto, imagenes, lo que sea
+\graphicspath{{images/}} % Directorio que contiene imagenes
+\captionsetup[table]{skip=10pt} % Posición tablas
+\captionsetup[figure]{skip=10pt} % Posición figuras
+\captionsetup{justification=centering}
+
+
+%----------------------------------------------------------------------------------------
+%	CONFIGURACION NOMBRE DE TÍTULOS, CAPÍTULOS, TABLAS, ÍNDICES
+%----------------------------------------------------------------------------------------
+\addto\captionsenglish{
+\renewcommand{\contentsname}{Índice}
+\renewcommand{\listfigurename}{Índice de figuras}
+\renewcommand{\listtablename}{Índice de tablas}
+\renewcommand{\baselinestretch}{1.0}
+\renewcommand{\appendixname}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixpagename}{Anexos}
+\renewcommand{\chaptername}{Capítulo}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+\renewcommand{\bibname}{Bibliografía}
+\renewcommand{\refname}{Bibliografía}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	CONFIGURACION BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+\bibliographystyle{apacite}
+\renewcommand{\BOthers}[1]{et al.\hbox{}}%       et al
+\renewcommand{\BOthersPeriod}[1]{et al.\hbox{}}%  et al.
