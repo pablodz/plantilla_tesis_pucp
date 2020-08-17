@@ -1,2 +1,2 @@
-# plantilla_tesis_pucp
+# Plantilla Tesis PUCP
 Plantilla Tesis PUCP, usualmente para ingeniería
