@@ -1,8 +1,28 @@
 %----------------------------------------------------------------------------------------
+%	AUTOR DE LA CONFIGURACIÓN ACTUAL
+%----------------------------------------------------------------------------------------
+
+% Pablo Díaz Vergara
+% Contáctamen en: pablo.diazv@pucp.edu.pe
+% Revisa las últimas actualizaciones en:
+% https://bit.ly/2EV6luX
+% Versión Cofiguraciones: v2.0
+% Fecha: 2020-09-04
+% Github: https://github.com/ZurMaD/plantilla_tesis_pucp/
+
+% AVISO: No modificar por su cuenta, enviar un correo para arreglar errores!
+
+%----------------------------------------------------------------------------------------
+%	NOMBRE DEL ARCHIVO
+%----------------------------------------------------------------------------------------
+
+% Eliminado por bugs en la visualización
+
+%----------------------------------------------------------------------------------------
 %	CONFIGURACION DOCUMENTO GENERAL
 %----------------------------------------------------------------------------------------
 
-\documentclass[12pt,a4paper,oneside]{report} % Formato tesis, 12 tamaño de letra
+\documentclass[12pt,a4paper,oneside]{thesis} % Formato tesis, 12 tamaño de letra
 \usepackage[english]{babel} % Asignar idioma por defecto spanish
 %\selectlanguage{spanish} % Idioma por defecto x2
 \usepackage[T1]{fontenc} % Aceptar caracteres con tíldes en el pdf generado
@@ -34,13 +54,13 @@
 \usepackage{fixltx2e} % Corrige bugs de Latex 3
 \usepackage{caption} % Objetos flotantes en el documento
 \usepackage[top=2.54cm,
-			bottom=2.54cm,
-			left=2.54cm,
-			right=2.54cm,
-			headheight=17pt, % as per the warning by fancyhdr
-			includehead,includefoot,
-			heightrounded, % to avoid spurious underfull messages
-			]{geometry} % Márgenes para contenido y líneas de pie y cabecera de página
+bottom=2.54cm,
+left=2.54cm,
+right=2.54cm,
+headheight=17pt, % as per the warning by fancyhdr
+includehead,includefoot,
+heightrounded, % to avoid spurious underfull messages
+]{geometry} % Márgenes para contenido y líneas de pie y cabecera de página
 \usepackage{fancyhdr} % Cabeza y pie de página 
 \usepackage{blindtext}
 \usepackage{pdfpages} % Cargar imagenes en pdf
@@ -48,7 +68,6 @@
 \usepackage{footnote} % Tablas largas y foot note para tablas https://texblog.org/2012/02/03/using-footnote-in-a-table/
 \usepackage{enumitem} % Enumerar letras
 \usepackage[bottom]{footmisc} % Forzar notas de página pegadas hacia abajo https://bit.ly/3fyOA2f
-
 
 \usepackage[paper=portrait,pagesize]{typearea} %PORTRAID-LANDSCAPE 
 
@@ -58,34 +77,81 @@
 \usepackage{natbib}
 \usepackage{etoolbox}
 
+\usepackage{mathptmx} % Times News Roman
+\usepackage{titlesec} % Cambiar chapter style
+\usepackage{indentfirst} % Agregar indentado de 1cm al inicio de cada párrafo de cada sección
+
+
+%----------------------------------------------------------------------------------------
+%	CONFIGURACION ESPACIADO, TAMAÑO DE LETRA Y RELACIONADOS A FIGURAS, TABLAS
+%----------------------------------------------------------------------------------------
+% Documentación \captionsetup https://bit.ly/31RjwG3 
+
+% FIGURAS
+\captionsetup[figure]{font={small,singlespacing}} % https://bit.ly/2QOHo6U
+\captionsetup[figure]{labelfont={bf}} % Negrita a Tabla X.X
+\captionsetup[figure]{labelsep={endash}} % Punto y espacio luego de Figura X.X. 
+\captionsetup[figure]{width={.75\textwidth}} % Sangría para título de Figura
+\captionsetup[figure]{justification={justified,centerlast}} % Justificado, última linea centrado
+\captionsetup[figure]{aboveskip=7pt} % https://bit.ly/3jIe7HF Foro latex
+\captionsetup[figure]{belowskip=7pt} 
+\captionsetup[figure]{skip=0pt} % Posición figuras
+\captionsetup[figure]{position=below} % Posición figuras
+\captionsetup[figure]{name=Figura} % Nombre figuras
+
+% TABLAS
+\captionsetup[table]{font={small,singlespacing}} % scriptsize,footnotesize,small,normalsize,larga,Large %stretch=0.8
+\captionsetup[table]{labelfont={bf}} % normalfont,up,it,sl,sc,md,bf,rm,sf,tt
+\captionsetup[table]{labelsep={endash}} % none,colon,period,space,quad,newline,endash 
+\captionsetup[table]{width={.75\textwidth}} % Sangría para título de tabla
+\captionsetup[table]{justification={justified,centerlast}} % Justificado, última linea centrado
+\captionsetup[table]{aboveskip=7pt} % Espaciado arriba del título
+\captionsetup[table]{belowskip=7pt} % Espaciado abajo del título
+\captionsetup[table]{skip=0pt} % Posición tablas
+\captionsetup[table]{position=above} % Posición tablas
+\captionsetup[table]{name=Tabla} % Nombre figuras
+
+%----------------------------------------------------------------------------------------
+%	CONFIGURACION SECCIONES DE CÓDIGO
+%----------------------------------------------------------------------------------------
+
+% Eliminado, contenia bugs, la siguiente versión se implementa
+
 %----------------------------------------------------------------------------------------
 %	CONFIGURACION FORMATO SECCIONES
 %----------------------------------------------------------------------------------------
 
-\fancypagestyle{blank-page}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PÁGINA DE CAPÍTULOS ES AUTOMÁTICO TIPO PLAIN       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancypagestyle{plain}{
+	\fancyhead{}% clear all header 
+	\fancyfoot{}% clear all footer
 	\fancyhf{}% clear all header and footer fields	
 	\fancyhead[L,C,R]{}
 	\fancyfoot[L,C,R]{}
-}
-
-\fancypagestyle{after-table-of-content}{
-	\fancyhf{}% clear all header and footer fields	
-	\fancyhead[L,C,R]{}
-	\fancyfoot[L,C,R]{}
-	\fancyfoot[c]{PUCP}
+	\fancyfoot[C]{Página \thepage}
 	\renewcommand{\headrulewidth}{0.4pt}
 	\renewcommand{\footrulewidth}{0.4pt}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PÁGINA VERTICAL                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \fancypagestyle{myportland}{
+	\fancyhead{}% clear all header 
+	\fancyfoot{}% clear all footer
 	\fancyhf{}% clear all header and footer fields	
 	\fancyhead[L,C,R]{}
 	\fancyfoot[L,C,R]{}
-	\fancyfoot[c]{\thepage}
+	\fancyfoot[C]{Página \thepage}
 	\renewcommand{\headrulewidth}{0.4pt}
 	\renewcommand{\footrulewidth}{0.4pt}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PÁGINA HORIZONTAL                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % https://tex.stackexchange.com/questions/337/how-to-change-certain-pages-into-landscape-portrait-mode
-\fancypagestyle{mylandscape}{ % LANDSCAPE	
+\fancypagestyle{mylandscape}{
 	\fancyhead{}% clear all header 
 	\fancyfoot{}% clear all footer
 	\fancyhf{}% clear all header and footer fields	
@@ -96,46 +162,84 @@
 			\rlap{\hspace{0.75cm}% Push out of margin by \footskip
 				\smash{% Remove vertical height
 					\raisebox{4.87in}{% Raise vertically
-						\rotatebox{90}{\thepage}}}}}}% Rotate counter-clockwise
+						\rotatebox{90}{Página \thepage}}}}}}% Rotate counter-clockwise
 	\renewcommand{\headrulewidth}{0pt}% No header rule
 	\renewcommand{\footrulewidth}{0pt}% No footer rule
 }
 
 
+%----------------------------------------------------------------------------------------
+%	UTILIDADES
+%----------------------------------------------------------------------------------------
+
 \newcommand*\rot{\rotatebox{90}} % Poder rotar 90° texto, imagenes, lo que sea
 \graphicspath{{images/}} % Directorio que contiene imagenes
-\captionsetup[table]{skip=10pt} % Posición tablas
-\captionsetup[figure]{skip=10pt} % Posición figuras
-\captionsetup{justification=centering}
 
 
 %----------------------------------------------------------------------------------------
 %	CONFIGURACION NOMBRE DE TÍTULOS, CAPÍTULOS, TABLAS, ÍNDICES
 %----------------------------------------------------------------------------------------
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CAMBIO DE FORMATO DE CAPÍTULOS                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% CHAPTER X
+\titleformat{\chapter}
+{\large\bfseries\filcenter}{\thechapter}{1em}{}
+% SECTION X.X
+\titleformat{\section}
+{\normalfont\bfseries\filright}{\thesection}{1em}{}
+
+% SUBSECTION X.X.X
+\titleformat{\subsection}
+{\normalfont\bfseries\filright}{\thesubsection}{1em}{}
+
+% SUBSUBSECTION X.X.X.X
+\titleformat{\subsubsection}
+{\normalfont\bfseries\filright}{\thesubsubsection}{1em}{}
+
+% Dentro del siguiente código no usar comentarios
 \addto\captionsenglish{
-\renewcommand{\contentsname}{Índice}
-\renewcommand{\listfigurename}{Índice de figuras}
-\renewcommand{\listtablename}{Índice de tablas}
-\renewcommand{\baselinestretch}{1.0}
-\renewcommand{\appendixname}{Anexos}
-\renewcommand{\appendixtocname}{Anexos}
-\renewcommand{\appendixpagename}{Anexos}
-\renewcommand{\chaptername}{Capítulo}
-\renewcommand{\tablename}{Tabla}
-\renewcommand{\figurename}{Figura}
-\renewcommand{\thechapter}{\Roman{chapter}}
-\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
-\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
-\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
-\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
-\renewcommand{\bibname}{Bibliografía}
-\renewcommand{\refname}{Bibliografía}
+	\renewcommand{\contentsname}{Índice}
+	\renewcommand{\listfigurename}{Índice de figuras}
+	\renewcommand{\listtablename}{Índice de tablas}
+	\renewcommand{\baselinestretch}{2}
+	\renewcommand{\appendixname}{Anexos}
+	\renewcommand{\appendixtocname}{Anexos}
+	\renewcommand{\appendixpagename}{Anexos}
+	\renewcommand{\chaptername}{Capítulo}
+	\renewcommand{\tablename}{Tabla}
+	\renewcommand{\figurename}{Figura}
+	\renewcommand{\thechapter}{\Roman{chapter}}
+	\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+	\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+	\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+	\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
 }
 
+\renewcommand{\bibsection}{} % Eliminar "References" título
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MODO 1: ENUMERACIÓN POR CAPÍTULOS 1.1,1.2,2.1,...  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+%\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+%\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MODO 2: ENUMERACIÓN ARÁBICA SECUENCIAL 1,2,3,4,... %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\thetable}{\arabic{1}}
+%\renewcommand{\thefigure}{\arabic{1}}
+%\renewcommand{\theequation}{\arabic{1}}
 
 %----------------------------------------------------------------------------------------
 %	CONFIGURACION BIBLIOGRAFIA
 %----------------------------------------------------------------------------------------
+
 \bibliographystyle{apacite}
 \renewcommand{\BOthers}[1]{et al.\hbox{}}%       et al
 \renewcommand{\BOthersPeriod}[1]{et al.\hbox{}}%  et al.
+% CONTINUA EN BIBLIOGRAPHY.TEX

@@ -1,0 +1,35 @@
+\babel@toc {english}{}
+\contentsline {chapter}{Resumen}{i}{chapter*.2}%
+\contentsline {chapter}{Introducción}{ii}{chapter*.3}%
+\contentsline {chapter}{Agradecimientos}{iii}{chapter*.4}%
+\contentsline {chapter}{Índice}{iv}{chapter*.4}%
+\contentsline {chapter}{Índice de figuras}{vi}{chapter*.5}%
+\contentsline {chapter}{Índice de tablas}{vii}{chapter*.6}%
+\contentsline {chapter}{\numberline {I.}----- Título del capítulo 1}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Primera sección dentro de un capítulo}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Primera subsección dentro de una sección}{1}{subsection.1.1.1}%
+\contentsline {subsubsection}{Primera subsubsección dentro de una sección}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Segunda subsección dentro de una sección}{1}{subsection.1.1.2}%
+\contentsline {subsubsection}{Tabla simple}{2}{figure.caption.8}%
+\contentsline {subsubsection}{Tabla simple con 1 imagen dentro}{3}{table.caption.9}%
+\contentsline {subsubsection}{Tabla simple con algunos bordes en blanco y columnas combinadas}{4}{table.caption.10}%
+\contentsline {subsubsection}{Tabla simple con ajuste al texto y no al borde de la página}{4}{table.caption.11}%
+\contentsline {subsubsection}{Tabla simple que si acepta pie de página dentro}{5}{table.caption.12}%
+\contentsline {subsubsection}{Prueba de extensión con textos largos}{6}{table.caption.13}%
+\contentsline {subsubsection}{Script de líneas de código}{9}{table.caption.13}%
+\contentsline {chapter}{\numberline {II.}----- Título del capítulo 2}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Título de sección 1}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Título de sección 2}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Título de sección 3}{11}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Título de sección 4}{11}{section.2.4}%
+\contentsline {chapter}{\numberline {III.}----- Título del capítulo 3}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Título de sección 1}{12}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Título de subsección 3}{12}{subsection.3.1.1}%
+\contentsline {subsubsection}{Tabla compleja que mantiene encabezado y pies de página}{12}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Cambiar la página a horizontal}{13}{subsection.3.1.2}%
+\contentsline {subsubsection}{Cómo hacer una lista}{15}{figure.caption.14}%
+\contentsline {chapter}{\numberline {IV.}----- Título del capítulo 4}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Manufactura}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Precio unitario}{18}{section.4.2}%
+\contentsline {chapter}{Conclusiones}{19}{chapter*.16}%
+\contentsline {chapter}{Referencias}{20}{chapter*.17}%

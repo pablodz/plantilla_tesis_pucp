@@ -1,15 +1,12 @@
 %----------------------------------------------------------------------------------------
 %	Capítulo 1
 %----------------------------------------------------------------------------------------
-\newpage
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\doublespacing
-\newpage
-%% NUEVO CAPITULO X
-\chapter{Título del capítulo 1}
+
 \pagestyle{myportland}
 \pagenumbering{arabic}
-\newpage
+\doublespacing
+\chapter[----- Título del capítulo 1]{Título del capítulo 1}
+\thispagestyle{myportland}
 
 
 
@@ -48,30 +45,27 @@ Así se ingresa una imagen que se ajuste a los bordes del texto:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{chapter1/extraccion trucha toneladas anuales.png}
-	\caption{Título de la figura que sale en el index y aquí.}
-	 Datos: \citep{MinisteriodelaProducciondelPeru2018} 	 \\ 
-	 Gráfico: Elaboración propia.
-	\label{fig:nombre llave para referenciar la imagen en el texto}
+	\vspace{-1em}
+	\caption{Título de la figura que sale en el index y aquí.}	
+	\vspace{-1.5em}
+	\begin{flushleft}
+		\small Datos: \cite{baker2011}. \\
+			Gráfico: Elaboración propia.
+	\end{flushleft}
+	\label{figura:nombre llave para referenciar la imagen en el texto}
 \end{figure}
+Así puedes citar la imagen: Figura \ref{figura:nombre llave para referenciar la imagen en el texto}.  Pellentesque venenatis, nibh id viverra elementum, ligula nulla scelerisque quam, vel vehicula nisl elit ut lorem. Nullam mattis nunc libero, ac ornare tortor consequat nec. Suspendisse eleifend nibh. \cite{Hardy2009}
 
-Así puedes citar la imagen: Figura \ref{fig:nombre llave para referenciar la imagen en el texto}.
-
-Se puede citar a autores con tipografía asiática : \citep{2010}
-
-Una tabla puedes presentarla como imagen de forma sencilla o realizarla en lenguaje LaTeX. Cómo incluir imagenes ya lo explicamos. 
-
-En LaTeX existen dos tipos de tablas: las tablas normales representadas por la palabra clave "table" y las tablas que pueden separarse si abarcan más de una página conservando su cabecera (Se especifica la cabecera de la tabla).
-
-Todas estas tablas no tienen que ser llenadas a mano, pueden generarse con la ayuda de páginas webs.
+Una tabla puedes presentarla como imagen de forma sencilla o realizarla en lenguaje LaTeX. Cómo incluir imagenes ya lo explicamos. En LaTeX existen dos tipos de tablas: las tablas normales representadas por la palabra clave "table" y las tablas que pueden separarse si abarcan más de una página conservando su cabecera (Se especifica la cabecera de la tabla). Todas estas tablas no tienen que ser llenadas a mano, pueden generarse con la ayuda de páginas webs.
 
 %% NUEVA SUB-SUB-SECCION X.X.X.X
 \subsubsection{Tabla simple}
 
-- Sirve para mostrar tablas de forma sencilla
-- No se separa manteniendo encabezado.
-- No se puede poner dentro de la tabla referencias a pie de página
-- 
+- Sirve para mostrar tablas de forma sencilla.
 
+- No se separa manteniendo encabezado.
+
+- No se puede poner dentro de la tabla referencias a pie de página
 
 
 % Please add the following required packages to your document preamble:
@@ -79,7 +73,7 @@ Todas estas tablas no tienen que ser llenadas a mano, pueden generarse con la ay
 % If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[H]
 	\centering
-	\caption{Comparación entre los métodos de clasificación.}
+	\caption{Título de tabla con texto largo Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit.}
 	\label{tbl:comparacion entre metodos de clasificacion}
 	\begin{tabular}{|l|c|c|c|c|}
 		\hline
@@ -91,7 +85,9 @@ Todas estas tablas no tienen que ser llenadas a mano, pueden generarse con la ay
 		{\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}Costo de \\ funcionamiento\end{tabular}} & {\color[HTML]{000000} Bajo} & {\color[HTML]{000000} Bajo} & {\color[HTML]{000000} Medio} & {\color[HTML]{000000} Alto} \\ \hline
 		{\color[HTML]{000000} Precisión} & {\color[HTML]{000000} Media} & {\color[HTML]{000000} Alta} & {\color[HTML]{000000} Alta} & {\color[HTML]{000000} Muy alta} \\ \hline
 	\end{tabular}
-	\\ Fuente: Elaboración Propia.
+	\begin{flushleft}
+		\small Fuente: Elaboración Propia.
+	\end{flushleft}	
 \end{table}
 
 %% NUEVA SUB-SUB-SECCION X.X.X.X
@@ -106,7 +102,9 @@ Todas estas tablas no tienen que ser llenadas a mano, pueden generarse con la ay
 			\includegraphics[width=1\textwidth]{chapter1/comercio internacional de productos pesqueros por principales importadores y exportadores en dolares.png}
 		\end{minipage}	
 	\end{tabular}
-	\\	Fuente: FAO.
+	\begin{flushleft}
+		\small Fuente: FAO
+	\end{flushleft}	
 \end{table}
 
 
@@ -130,7 +128,9 @@ Todas estas tablas no tienen que ser llenadas a mano, pueden generarse con la ay
 		\multicolumn{1}{|l|}{\cellcolor[HTML]{9B9B9B}\textbf{Hasta \textit{(g)}}} & 2.80 & 6.90 & 10 & 50 & 109 & 152 & 199 & 250 & 290 \\ \hline
 		\multicolumn{1}{|l|}{\cellcolor[HTML]{9B9B9B}\textbf{Este trabajo \textit{(mm)}}} & \multicolumn{3}{c|}{} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}100 a 200} & \multicolumn{2}{c|}{} \\ \hline
 	\end{tabular}
-	\\Fuente: FONDEPES.
+	\begin{flushleft}
+		\small Fuente: FONDEPES
+	\end{flushleft}	
 \end{table}
 
 %% NUEVA SUB-SUB-SECCION X.X.X.X
@@ -157,7 +157,9 @@ Todas estas tablas no tienen que ser llenadas a mano, pueden generarse con la ay
 		{\color[HTML]{000000} Costo de funcionamiento} & {\color[HTML]{000000} Bajo} & {\color[HTML]{000000} Alto}      \\ \hline
 		{\color[HTML]{000000} Precisión}               & {\color[HTML]{000000} Bajo} & {\color[HTML]{000000} Medio}     \\ \hline
 	\end{tabular}
-	\\ Fuente: Elaboración propia.
+	\begin{flushleft}
+		\small Fuente: Elaboración propia
+	\end{flushleft}	
 \end{table}
  
 
@@ -251,7 +253,43 @@ Todas estas tablas no tienen que ser llenadas a mano, pueden generarse con la ay
 			{\color[HTML]{000000} -} &
 			{\color[HTML]{000000} 15 730} &
 			{\color[HTML]{000000} 53 567} \\ \hline
-		\end{tabular}
-	\\Fuente: AGK, Helios 25, Apollo, Pentair y Elaboración propia.
+		\end{tabular}	
+	\begin{flushleft}
+		\small Fuente: AGK, Helios 25, Apollo, Pentair y Elaboración propia.
+	\end{flushleft}
 	\end{table}
 \end{savenotes}
+
+
+\newpage
+
+%% NUEVA SUB-SUB-SECCION X.X.X.X
+\subsubsection{Prueba de extensión con textos largos}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ultrices sagittis orci a scelerisque purus semper. Auctor augue mauris augue neque gravida in fermentum et sollicitudin. In ornare quam viverra orci sagittis eu volutpat. Odio eu feugiat pretium nibh ipsum consequat nisl. Risus commodo viverra maecenas accumsan. Ac felis donec et odio. Cursus eget nunc scelerisque viverra mauris. Egestas tellus rutrum tellus pellentesque eu. Ultrices dui sapien eget mi proin sed libero enim. Cras sed felis eget velit aliquet. Ut venenatis tellus in metus vulputate eu. Duis convallis convallis tellus id interdum velit. Ornare arcu dui vivamus arcu.
+
+Id porta nibh venenatis cras sed felis eget. Accumsan sit amet nulla facilisi morbi. Nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi. Ac turpis egestas sed tempus urna et pharetra. Tortor consequat id porta nibh venenatis cras sed felis. At elementum eu facilisis sed. Nibh cras pulvinar mattis nunc sed. Consequat nisl vel pretium lectus quam id leo in. In tellus integer feugiat scelerisque varius morbi enim nunc. Lacinia at quis risus sed vulputate. Duis ultricies lacus sed turpis tincidunt id aliquet. Ridiculus mus mauris vitae ultricies leo. Diam vel quam elementum pulvinar. Lectus urna duis convallis convallis tellus. Laoreet id donec ultrices tincidunt. Elementum curabitur vitae nunc sed. Nibh tortor id aliquet lectus proin nibh.
+
+Augue eget arcu dictum varius. Mattis nunc sed blandit libero volutpat sed cras. Velit euismod in pellentesque massa placerat duis ultricies lacus. Urna cursus eget nunc scelerisque viverra mauris in aliquam. Habitasse platea dictumst quisque sagittis purus sit amet volutpat. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique. Dictum non consectetur a erat. Cursus eget nunc scelerisque viverra mauris in aliquam sem. Tincidunt augue interdum velit euismod in pellentesque massa placerat. Et malesuada fames ac turpis egestas maecenas. Quis risus sed vulputate odio. Morbi tincidunt augue interdum velit euismod in pellentesque massa. Risus quis varius quam quisque id diam vel. Id ornare arcu odio ut sem nulla. Facilisis mauris sit amet massa vitae tortor. Amet dictum sit amet justo donec enim diam. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Purus semper eget duis at tellus at. Semper eget duis at tellus at urna condimentum.
+
+Risus at ultrices mi tempus imperdiet nulla. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Sollicitudin aliquam ultrices sagittis orci a. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Mi quis hendrerit dolor magna eget est lorem ipsum. Et egestas quis ipsum suspendisse. Aliquam purus sit amet luctus venenatis lectus magna fringilla. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Tempor commodo ullamcorper a lacus. Gravida rutrum quisque non tellus orci ac auctor augue mauris. Odio aenean sed adipiscing diam donec adipiscing tristique risus.
+
+Tellus in hac habitasse platea dictumst vestibulum rhoncus est. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Malesuada nunc vel risus commodo viverra maecenas. Lorem donec massa sapien faucibus et molestie ac. Felis imperdiet proin fermentum leo vel. Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Ut pharetra sit amet aliquam id diam maecenas. Id venenatis a condimentum vitae sapien. In aliquam sem fringilla ut morbi tincidunt. Id nibh tortor id aliquet lectus proin nibh nisl. Sagittis purus sit amet volutpat consequat. Porttitor massa id neque aliquam vestibulum morbi blandit cursus. Nisl vel pretium lectus quam id leo in. Malesuada pellentesque elit eget gravida cum sociis natoque. Eget egestas purus viverra accumsan in nisl nisi scelerisque. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Duis ut diam quam nulla porttitor massa id neque. Id venenatis a condimentum vitae sapien pellentesque habitant. Eleifend donec pretium vulputate sapien nec sagittis.
+
+Ipsum dolor sit amet consectetur adipiscing. Consequat nisl vel pretium lectus quam id leo. Mollis nunc sed id semper risus in. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Neque aliquam vestibulum morbi blandit cursus risus at ultrices mi. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Ornare arcu dui vivamus arcu. Neque laoreet suspendisse interdum consectetur. Enim diam vulputate ut pharetra sit amet aliquam. Lobortis elementum nibh tellus molestie nunc non blandit massa. Dolor sit amet consectetur adipiscing elit. Justo laoreet sit amet cursus. Ut tortor pretium viverra suspendisse. Sagittis eu volutpat odio facilisis. Leo duis ut diam quam nulla porttitor massa. Tellus elementum sagittis vitae et leo duis.
+
+Aliquet lectus proin nibh nisl condimentum id venenatis. Pharetra convallis posuere morbi leo urna molestie at elementum eu. Malesuada nunc vel risus commodo viverra. Leo in vitae turpis massa sed elementum tempus egestas. At elementum eu facilisis sed odio. Viverra aliquet eget sit amet tellus cras adipiscing. Volutpat maecenas volutpat blandit aliquam etiam erat velit. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vulputate ut pharetra sit amet aliquam. In hac habitasse platea dictumst quisque sagittis. Lectus magna fringilla urna porttitor rhoncus dolor. Leo urna molestie at elementum eu facilisis sed. Aliquam faucibus purus in massa tempor. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. In hendrerit gravida rutrum quisque non tellus orci. Pharetra massa massa ultricies mi quis hendrerit dolor magna.
+
+Ac ut consequat semper viverra nam. Leo vel fringilla est ullamcorper eget nulla facilisi. Egestas tellus rutrum tellus pellentesque eu tincidunt. Convallis convallis tellus id interdum velit laoreet id donec ultrices. Ut etiam sit amet nisl purus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Pretium fusce id velit ut tortor pretium viverra suspendisse. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Ornare lectus sit amet est placerat. Et malesuada fames ac turpis egestas integer eget. Et tortor consequat id porta nibh. Suspendisse faucibus interdum posuere lorem ipsum dolor. Gravida quis blandit turpis cursus. Sem viverra aliquet eget sit amet tellus cras adipiscing enim. Molestie a iaculis at erat pellentesque. Cursus mattis molestie a iaculis at. Elementum eu facilisis sed odio.
+
+Montes nascetur ridiculus mus mauris. Morbi tristique senectus et netus et malesuada fames. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Volutpat est velit egestas dui id ornare. Aliquam sem et tortor consequat id porta nibh venenatis. Mi tempus imperdiet nulla malesuada pellentesque elit. Euismod nisi porta lorem mollis aliquam ut. Tortor condimentum lacinia quis vel eros donec ac odio tempor. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. In vitae turpis massa sed. Senectus et netus et malesuada fames ac turpis. Egestas quis ipsum suspendisse ultrices gravida dictum fusce. Sed euismod nisi porta lorem mollis. Tempor nec feugiat nisl pretium. Mattis nunc sed blandit libero volutpat sed cras.
+
+Felis bibendum ut tristique et egestas quis ipsum suspendisse. Dolor magna eget est lorem ipsum dolor sit amet. Donec pretium vulputate sapien nec sagittis aliquam. Vestibulum lorem sed risus ultricies tristique nulla aliquet. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Non quam lacus suspendisse faucibus. Augue neque gravida in fermentum et. Maecenas volutpat blandit aliquam etiam erat. Porta lorem mollis aliquam ut porttitor leo a. Varius quam quisque id diam vel quam elementum pulvinar etiam. Ornare arcu odio ut sem.
+
+
+
+
+%% NUEVA SUB-SUB-SECCION X.X.X.X
+\subsubsection{Script de líneas de código}
+
+Sección eliminada por bugs

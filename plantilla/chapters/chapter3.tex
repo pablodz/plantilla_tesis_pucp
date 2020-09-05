@@ -2,13 +2,11 @@
 %	Capítulo 3
 %----------------------------------------------------------------------------------------
 
-\newpage
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\doublespacing
-%% NUEVO CAPITULO X
-\chapter{Título del capítulo 3}
-\newpage
 \pagestyle{myportland}
+\doublespacing
+%\pagenumbering{arabic}
+\chapter[----- Título del capítulo 3]{Título del capítulo 3}
+\thispagestyle{myportland}
 
 %% NUEVA SECCIÓN X.X
 \section{Título de sección 1}
@@ -16,11 +14,11 @@
 Así se cita una página en específico o un rango
 Página:
 
-\cite[p.~159]{Pahl2007}
+\cite{wei2012}
 
 Rango de páginas:
 
-\cite[p.~159-165]{Pahl2007}
+\cite[p.~159-165]{kanwar2013}
 
 %% NUEVO SUBSECCION X.X.X
 \subsection{Título de subsección 3}
@@ -169,10 +167,13 @@ Así se hace una lista
 		\centering
 		\includegraphics[width=0.98\paperwidth]{chapter3/proceso de clasificacion y conteo manual.png}
 		\caption{Método manual de clasificación y conteo de truchas.}
-		Fuente: Elaboración propia.
+		\vspace{-1.5em}
+		\begin{flushleft}
+		\small Fuente: Elaboración propia.
+		\end{flushleft}		
 		\label{fig:proceso de clasificacion y conteo manual}
 	\end{figure}
 \end{landscape}
 
 \newpage
-\pagestyle{fancy}
+\pagestyle{myportland}

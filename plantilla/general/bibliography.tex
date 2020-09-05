@@ -2,12 +2,17 @@
 %	BIBLIOGRAFIA
 %----------------------------------------------------------------------------------------
 
-\newpage
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\doublespacing
-\newpage
-\pagestyle{empty}
-\pagenumbering{gobble}
+\renewcommand{\baselinestretch}{0}
+\pagestyle{myportland}
+%\pagenumbering{arabic}
+\chapter*{\centering \large Referencias}
+\addcontentsline{toc}{chapter}{Referencias}
+\markboth{Referencias}{Referencias}
+\thispagestyle{myportland}
 
-\bibliography{general/library}
-\bibliographystyle{apalike}
+\bibliography{ref/lib}
+\bibliographystyle{apacite}
+\nocite{*} % FORZAR CITADO DE TODOS LOS AUTORES EN EL ARCHIVO lib.bib
+\thispagestyle{myportland}
+%\renewcommand{\BOthers}[1]{et al.\hbox{}}%       et al
+%\renewcommand{\BOthersPeriod}[1]{et al.\hbox{}}%  et al.
