@@ -19,3 +19,7 @@ Plantilla Tesis Pontificia Universidad Católica del Perú, usualmente para inge
 4. Abre el archivo ´main.tex´ en TexStudio, luego en la pestaña Opciones > Documento principal > Establecer este documento como documento principal
 
 5. Dale F5 para Compilar y Ver (Dos flechas verdes)
+
+# Ejemplos de uso
+
+- Clic aquí [TFC1 & TFC2](https://github.com/ZurMaD/tesis_pregrado_pucp)
