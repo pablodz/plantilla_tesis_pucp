@@ -1,4 +1,8 @@
-# Plantilla Tesis y trabajo de investigación PUCP 2020
+# Plantilla Tesis y trabajo de investigación PUCP 2021
+
+<img src="img/plantilla.jpg"
+     alt="Plantilla tesis PUCP y trabajo de investigacion PUCP"
+     style="float: left; margin-right: 10px;" />
 
 Plantilla Tesis Pontificia Universidad Católica del Perú, usualmente para ingeniería.
 
