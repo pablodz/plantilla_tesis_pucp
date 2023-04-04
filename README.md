@@ -1,28 +1,35 @@
-# Plantilla Tesis y trabajo de investigación PUCP 2021
+# Plantilla Tesis y trabajo de investigación PUCP 2023
 
 <img src="img/plantilla.jpg"
      alt="Plantilla tesis PUCP y trabajo de investigacion PUCP"
      style="float: left; margin-right: 10px;" />
 
-Plantilla Tesis Pontificia Universidad Católica del Perú, usualmente para ingeniería.
+# [Actualización 2023-03-04] Se recomienda usar Typst para una más fácil ejecución de la plantilla.
 
-- Plantilla original: César Augusto Portocarrero Rodríguez
+Plantilla Tesis Pontificia Universidad Católica del Perú, usualmente para ingeniería.
 
 - Plantilla modificada al nuevo formato: Pablo Díaz
 
-- La plantilla puede ser usada tanto para Tesis como para trabajo de investigación. Seleccionar alguno dentro del archivo `main.tex`
+- La plantilla puede ser usada tanto para Tesis como para trabajo de investigación. Seleccionar alguno dentro del archivo `main.typ`
 
 # Cómo usar la plantilla?
 
 1. Descarga este repositorio como zip [aquí](https://github.com/ZurMaD/plantilla_tesis_pucp/archive/master.zip)
-
 2. Extrae el contenido en una carpeta
+3. Instala Typst:
+   1. Ve a la siguiente página https://github.com/typst/typst/releases
+   2. Dale clic a la sección assets del último release
+   3. Dale clic al archivo que contenga el nombre de tu sistema operativo (Windows, Linux, Mac) 
+   4. Extrae el ejecutable y ejecútalo
+4. Instala un editor de texto [Visual Studio Code](https://code.visualstudio.com/)
+   1. Instala la extensión de Typst para VSCode llamada (Typst LSP).
+   2. Instala la extensión "vscode-pdf" para visualizar el pdf generado.
+   3. Abre la carpeta con este programa.
+   4. Abre el archivo `main.typ` y comienza a escribir (el archivo pdf se generará solo cada vez que guardes el archivo)
 
-3. Instala MikTek y luego TexStudio.
+# Referencia de uso
 
-4. Abre el archivo ´main.tex´ en TexStudio, luego en la pestaña Opciones > Documento principal > Establecer este documento como documento principal
-
-5. Dale F5 para Compilar y Ver (Dos flechas verdes)
+![](https://i.imgur.com/zVCJWRg.png)
 
 # Ejemplos de uso
 
