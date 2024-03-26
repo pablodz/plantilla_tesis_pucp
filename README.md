@@ -1,3 +1,5 @@
+* Update 2024: Se recomienda usar nuevas herramientas como [Typst](https://typst.app/) *
+
 # Plantilla Tesis y trabajo de investigación PUCP 2021
 
 <img src="img/plantilla.jpg"
